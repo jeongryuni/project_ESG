@@ -23,7 +23,7 @@ select_element = driver.find_element(By.ID, 'sch_yyc4ca4238a0b923820dcc509a6f758
 
 # Select 객체 생성 후 옵션 선택
 select = Select(select_element)
-select.select_by_value('2024')
+select.select_by_value('2022')
 
 # 선택된 연도 확인
 selected_year = select.first_selected_option.text
@@ -107,4 +107,4 @@ print(df)
 driver.quit()
 
 # CSV로 저장
-df.to_csv('2024-ESG.csv', index=False)
+df.to_csv('2022-ESG.csv', index=False)
