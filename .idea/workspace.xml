@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5337c5d7-5485-4843-a9bf-2cfd5cb7038b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_cleaning/cleaned_data/finance_data/finance_year_quarter_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_cleaning/finance_cleaning_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_cleaning/finance_cleaning_2.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nVfs7j6gy8prSPehybhW2Aw5bB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.ESG_cleaning_1.executor": "Run",
+    "Python.ESG_cleaning_3.executor": "Run",
+    "Python.ESG_crawling.executor": "Run",
+    "Python.ex_py_test.executor": "Run",
+    "Python.finance_cleaning_1.executor": "Run",
+    "Python.finance_cleaning_2.executor": "Run",
+    "Python.finance_data.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.regression_analysis.executor": "Run",
+    "Python.stock_price_volatility.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "data-analysis",
+    "last_opened_file_path": "C:/Python310",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5337c5d7-5485-4843-a9bf-2cfd5cb7038b" name="Changes" comment="" />
+      <created>1729063367884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729063367884</updated>
+      <workItem from="1729063368901" duration="39000" />
+      <workItem from="1729064078098" duration="244000" />
+      <workItem from="1729064334969" duration="580000" />
+      <workItem from="1729064949259" duration="1083000" />
+      <workItem from="1729066068884" duration="4478000" />
+      <workItem from="1729070945571" duration="629000" />
+      <workItem from="1729071684908" duration="201000" />
+      <workItem from="1729072518020" duration="20000" />
+      <workItem from="1729072549145" duration="28000" />
+      <workItem from="1729072622334" duration="1000" />
+      <workItem from="1729494868473" duration="8000" />
+      <workItem from="1729494897728" duration="25000" />
+      <workItem from="1729495314325" duration="596000" />
+      <workItem from="1729495933661" duration="151000" />
+      <workItem from="1729496106978" duration="13000" />
+      <workItem from="1729496134069" duration="29000" />
+      <workItem from="1729496180002" duration="237000" />
+      <workItem from="1729496432960" duration="817000" />
+      <workItem from="1729497618399" duration="12000" />
+      <workItem from="1729498012101" duration="34000" />
+      <workItem from="1729498075524" duration="5791000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/workspace$stock_price_volatility.coverage" NAME="stock_price_volatility Coverage Results" MODIFIED="1729500403409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
+    <SUITE FILE_PATH="coverage/workspace$main.coverage" NAME="main Coverage Results" MODIFIED="1729071511521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/workspace$finance_cleaning_2.coverage" NAME="finance_cleaning_2 Coverage Results" MODIFIED="1729499659166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$ESG_cleaning_3.coverage" NAME="ESG_cleaning_3 Coverage Results" MODIFIED="1729503847940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$ESG_cleaning_1.coverage" NAME="ESG_cleaning_1 Coverage Results" MODIFIED="1729071565189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$regression_analysis.coverage" NAME="regression_analysis Coverage Results" MODIFIED="1729502892742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
+    <SUITE FILE_PATH="coverage/workspace$finance_data.coverage" NAME="finance_data Coverage Results" MODIFIED="1729066127902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_collection" />
+    <SUITE FILE_PATH="coverage/workspace$finance_cleaning_1.coverage" NAME="finance_cleaning_1 Coverage Results" MODIFIED="1729071831970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$ex_py_test.coverage" NAME="ex_py_test Coverage Results" MODIFIED="1729501422298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
+    <SUITE FILE_PATH="coverage/workspace$ESG_crawling.coverage" NAME="ESG_crawling Coverage Results" MODIFIED="1729069800861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_collection" />
+  </component>
+</project>

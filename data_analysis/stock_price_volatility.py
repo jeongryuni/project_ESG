@@ -1,8 +1,7 @@
 import pandas as pd
 
 # 1. 데이터 불러오기
-df = pd.read_csv('cleaned_data/finance_data/finance_year_quarter_data.csv')
-
+df = pd.read_csv('../data_cleaning/cleaned_data/finance_data/finance_year_quarter_data.csv')
 
 # 2. 변동률 계산 함수 작성
 def calculate_change_rates(df):
@@ -31,8 +30,21 @@ def calculate_change_rates(df):
             q3_to_q4 = ((q4_close.values[0] - q3_close.values[0]) / q3_close.values[0]) * 100
             change_rates.append({'종목명': stock, '연도': year, '분기': 'Q4', '변동률 (%)': q3_to_q4})
 
-    return pd.DataFrame(change_rates)
+    # 새로운 연도로 넘어갈 때 Q1 변동률 계산
+    for (stock, year), group in grouped:
+        if year > df['연도'].min():  # 이전 연도가 존재할 때
+            previous_year = year - 1
+            previous_group = df[(df['종목명'] == stock) & (df['연도'] == previous_year) & (df['분기'] == 'Q4')]
 
+            if not previous_group.empty and not group[group['분기'] == 'Q1'].empty:
+                previous_q4_close = previous_group['종가'].values[0]
+                current_q1_close = group[group['분기'] == 'Q1']['종가'].values[0]
+
+                # Q1 변동률 계산
+                q4_to_q1 = ((current_q1_close - previous_q4_close) / previous_q4_close) * 100
+                change_rates.append({'종목명': stock, '연도': year, '분기': 'Q1', '변동률 (%)': q4_to_q1})
+
+    return pd.DataFrame(change_rates)
 
 # 3. 새로운 데이터프레임 생성
 change_rate_df = calculate_change_rates(df)
@@ -44,4 +56,4 @@ df = df.merge(change_rate_df, on=['종목명', '연도', '분기'], how='left')
 print(df.head())
 
 # 변동률 데이터 저장
-df.to_csv('cleaned_data/finance_data/finance_with_change_rates.csv', index=False)
+df.to_csv('finance_with_change_rates.csv', index=False)
