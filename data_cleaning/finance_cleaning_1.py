@@ -1,4 +1,4 @@
-# 1. 주가 데이터 정제
+# 주가 데이터 정제
 # ESG 데이터와 주가 데이터의 동일한 회사만 교집합으로 남아있게 병합
 
 import pandas as pd
@@ -25,3 +25,4 @@ print(merged_df.head())
 
 # 병합된 데이터를 CSV 파일로 저장
 merged_df.to_csv('cleaned_data/finance_data/2023_12_finance_cleaned_data.csv', index=False, encoding='utf-8')
+
