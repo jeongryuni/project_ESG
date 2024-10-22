@@ -1,47 +1,47 @@
+# 2. 주가 데이터 정제
+# 모든 년도와 분기를 표기해 한 데이터프레임으로 저장
+
 import pandas as pd
+import glob
+import os
 
-# 1. 데이터 불러오기
-df = pd.read_csv('cleaned_data/finance_data/finance_year_quarter_data.csv')
+# 모든 CSV 파일을 가져오기
+file_list = glob.glob('cleaned_data/finance_data/*.csv')
 
+# 데이터프레임 리스트
+df_list = []
 
-# 2. 변동률 계산 함수 작성
-def calculate_change_rates(df):
-    change_rates = []
+# 분기 변환 매핑 (03 -> Q1, 06 -> Q2, 09 -> Q3, 12 -> Q4)
+quarter_mapping = {
+    '03': 'Q1',
+    '06': 'Q2',
+    '09': 'Q3',
+    '12': 'Q4'
+}
 
-    # 종목명과 연도, 분기로 그룹화
-    grouped = df.groupby(['종목명', '연도'])
+for file in file_list:
+    # 파일명에서 연도와 분기 추출 (예: '2020_03_finance_cleaned_data.csv')
+    file_name = os.path.basename(file)  # 파일 이름만 가져오기
+    year, quarter = file_name.split('_')[0], file_name.split('_')[1]
 
-    for (stock, year), group in grouped:
-        # 각 분기 데이터 가져오기
-        q1_close = group[group['분기'] == 'Q1']['종가']
-        q2_close = group[group['분기'] == 'Q2']['종가']
-        q3_close = group[group['분기'] == 'Q3']['종가']
-        q4_close = group[group['분기'] == 'Q4']['종가']
+    # CSV 파일 읽기
+    df = pd.read_csv(file)
 
-        # 변동률 계산
-        if not q1_close.empty and not q2_close.empty:
-            q1_to_q2 = ((q2_close.values[0] - q1_close.values[0]) / q1_close.values[0]) * 100
-            change_rates.append({'종목명': stock, '연도': year, '분기': 'Q2', '변동률 (%)': q1_to_q2})
+    # 연도와 분기 컬럼 추가
+    df['연도'] = year
+    df['분기'] = quarter_mapping.get(quarter, quarter)  # 분기를 매핑하여 변환
 
-        if not q2_close.empty and not q3_close.empty:
-            q2_to_q3 = ((q3_close.values[0] - q2_close.values[0]) / q2_close.values[0]) * 100
-            change_rates.append({'종목명': stock, '연도': year, '분기': 'Q3', '변동률 (%)': q2_to_q3})
+    # 리스트에 데이터프레임 추가
+    df_list.append(df)
 
-        if not q3_close.empty and not q4_close.empty:
-            q3_to_q4 = ((q4_close.values[0] - q3_close.values[0]) / q3_close.values[0]) * 100
-            change_rates.append({'종목명': stock, '연도': year, '분기': 'Q4', '변동률 (%)': q3_to_q4})
+# 모든 데이터프레임을 하나로 병합
+merged_df = pd.concat(df_list, ignore_index=True)
 
-    return pd.DataFrame(change_rates)
-
-
-# 3. 새로운 데이터프레임 생성
-change_rate_df = calculate_change_rates(df)
-
-# 원본 데이터프레임에 변동률 컬럼 추가
-df = df.merge(change_rate_df, on=['종목명', '연도', '분기'], how='left')
+# 데이터 정렬
+merged_df = merged_df.sort_values(by=['종목명','연도','분기'])
 
 # 결과 확인
-print(df.head())
+print(merged_df.head())
 
-# 변동률 데이터 저장
-df.to_csv('cleaned_data/finance_data/finance_with_change_rates.csv', index=False)
+# 병합된 데이터 저장
+merged_df.to_csv('cleaned_data/finance_data/finance_year_quarter_data.csv', index=False)
