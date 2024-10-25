@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5337c5d7-5485-4843-a9bf-2cfd5cb7038b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_cleaning/finance_cleaning_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_cleaning/finance_cleaning_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_cleaning/finance_cleaning_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_cleaning/finance_cleaning_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +42,7 @@
     &quot;Python.finance_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.regression_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.regressor.executor&quot;: &quot;Run&quot;,
     &quot;Python.stock_price_volatility.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -96,6 +95,9 @@
       <workItem from="1729498012101" duration="34000" />
       <workItem from="1729498075524" duration="5791000" />
       <workItem from="1729591562908" duration="91000" />
+      <workItem from="1729843630965" duration="995000" />
+      <workItem from="1729844654710" duration="643000" />
+      <workItem from="1729845315797" duration="541000" />
     </task>
     <servers />
   </component>
@@ -103,16 +105,17 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/workspace$stock_price_volatility.coverage" NAME="stock_price_volatility Coverage Results" MODIFIED="1729500403409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
     <SUITE FILE_PATH="coverage/workspace$main.coverage" NAME="main Coverage Results" MODIFIED="1729071511521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/workspace$finance_cleaning_2.coverage" NAME="finance_cleaning_2 Coverage Results" MODIFIED="1729590695643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
-    <SUITE FILE_PATH="coverage/workspace$ESG_cleaning_3.coverage" NAME="ESG_cleaning_3 Coverage Results" MODIFIED="1729503847940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
-    <SUITE FILE_PATH="coverage/workspace$ESG_cleaning_1.coverage" NAME="ESG_cleaning_1 Coverage Results" MODIFIED="1729071565189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
     <SUITE FILE_PATH="coverage/workspace$regression_analysis.coverage" NAME="regression_analysis Coverage Results" MODIFIED="1729502892742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
     <SUITE FILE_PATH="coverage/workspace$finance_data.coverage" NAME="finance_data Coverage Results" MODIFIED="1729066127902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_collection" />
     <SUITE FILE_PATH="coverage/workspace$ex_py_test.coverage" NAME="ex_py_test Coverage Results" MODIFIED="1729501422298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
-    <SUITE FILE_PATH="coverage/workspace$finance_cleaning_1.coverage" NAME="finance_cleaning_1 Coverage Results" MODIFIED="1729587261641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
     <SUITE FILE_PATH="coverage/workspace$finance_cleaning_3.coverage" NAME="finance_cleaning_3 Coverage Results" MODIFIED="1729591517311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$stock_price_volatility.coverage" NAME="stock_price_volatility Coverage Results" MODIFIED="1729500403409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
+    <SUITE FILE_PATH="coverage/workspace$finance_cleaning_2.coverage" NAME="finance_cleaning_2 Coverage Results" MODIFIED="1729590695643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$ESG_cleaning_3.coverage" NAME="ESG_cleaning_3 Coverage Results" MODIFIED="1729503847940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$ESG_cleaning_1.coverage" NAME="ESG_cleaning_1 Coverage Results" MODIFIED="1729071565189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
+    <SUITE FILE_PATH="coverage/workspace$finance_cleaning_1.coverage" NAME="finance_cleaning_1 Coverage Results" MODIFIED="1729587261641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_cleaning" />
     <SUITE FILE_PATH="coverage/workspace$ESG_crawling.coverage" NAME="ESG_crawling Coverage Results" MODIFIED="1729069800861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_collection" />
+    <SUITE FILE_PATH="coverage/workspace$regressor.coverage" NAME="regressor Coverage Results" MODIFIED="1729845771998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis" />
   </component>
 </project>
