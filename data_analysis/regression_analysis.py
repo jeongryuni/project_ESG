@@ -1,7 +1,7 @@
 # 회귀분석
 # ESG 등급에 따른 주가 변동성 분석
-# 독립변수 : 2020~2023년까지의 ESG 평균 등급
-# 종속변수 : 2020~2023년까지의 종목별 주가 변동성
+# 독립변수 : 2020~2024년까지의 ESG 평균 등급
+# 종속변수 : 2020~2024년까지의 종목별 주가 변동성
 
 import pandas as pd
 import statsmodels.api as sm
@@ -74,8 +74,8 @@ plt.plot(merged_df['종합등급_수치'], predictions, color='red', label='Regr
 
 # 그래프 제목 및 레이블 설정
 plt.title('ESG 등급에 따른 주가 변동성 분석')
-plt.xlabel('ESG 평균 등급 (2020~2023)')
-plt.ylabel('주가 변동성 (2020~2023)')
+plt.xlabel('ESG 평균 등급 (2020~2024)')
+plt.ylabel('주가 변동성 (2020~2024)')
 plt.legend()
 plt.grid()
 
