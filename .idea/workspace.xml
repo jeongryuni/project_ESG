@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5337c5d7-5485-4843-a9bf-2cfd5cb7038b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/분기별_주가_데이터.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/종목별_변동성.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_cleaning/cleaned_data/finance_data/finance_year_quarter_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_cleaning/cleaned_data/finance_data/finance_year_quarter_filtered_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_cleaning/finance_cleaning_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_cleaning/finance_cleaning_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_cleaning/finance_cleaning_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_cleaning/finance_cleaning_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +50,7 @@
     "Python.finance_cleaning_2.executor": "Run",
     "Python.finance_cleaning_3.executor": "Run",
     "Python.finance_data.executor": "Run",
+    "Python.finance_volatility.executor": "Run",
     "Python.main.executor": "Run",
     "Python.regresiion_analysis.executor": "Run",
     "Python.regression_analysis.executor": "Run",
@@ -66,11 +73,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project_ESG\workspace\data_collection\data\finance_data" />
       <recent name="C:\study_khj\project_esg\workspace\data_cleaning\cleaned_data\esg_data" />
       <recent name="C:\study_khj\project_esg\workspace\data_collection\data\esg_data" />
       <recent name="C:\study_khj\project_esg\workspace\data_cleaning\cleaned_data\ESG_data" />
       <recent name="C:\study_khj\project_esg\workspace\data_cleaning\cleaned_data\finance_data" />
-      <recent name="C:\study_khj\project_esg\workspace\data_cleaning" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -119,6 +126,7 @@
       <workItem from="1737353507549" duration="230000" />
       <workItem from="1737353781677" duration="219000" />
       <workItem from="1737355253333" duration="12000" />
+      <workItem from="1737699912869" duration="10000" />
     </task>
     <servers />
   </component>
