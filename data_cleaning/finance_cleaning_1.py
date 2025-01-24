@@ -8,7 +8,7 @@ esg_file = 'cleaned_data/esg_data/ESG_year_data.csv'
 esg_df = pd.read_csv(esg_file, encoding='utf-8')
 
 # 금융 데이터 불러오기
-finance_file = '../data_collection/data/finance_data/2023_12_finance_data.csv'
+finance_file = '../data_collection/data/finance_data/2024_12_finance_data.csv'
 finance_df = pd.read_csv(finance_file, encoding='EUC-KR')
 
 # 두 데이터 프레임의 공통 열인 '회사명'과 '종목명'을 기준으로 교집합 병합
@@ -24,5 +24,5 @@ merged_df = merged_df.drop_duplicates()
 print(merged_df.head())
 
 # 병합된 데이터를 CSV 파일로 저장
-merged_df.to_csv('cleaned_data/finance_data/2023_12_finance_cleaned_data.csv', index=False, encoding='utf-8')
+merged_df.to_csv('cleaned_data/finance_data/2024_12_finance_cleaned_data.csv', index=False, encoding='utf-8')
 
