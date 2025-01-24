@@ -8,7 +8,7 @@ finance_df = pd.read_csv('cleaned_data/finance_data/finance_year_quarter_data.cs
 # 종목명 별로 빈도 수 확인
 counts = finance_df['종목명'].value_counts()
 
-# 빈도가 16인 종목명만 필터링
+# 빈도가 20인 종목명만 필터링
 filtered_df = finance_df[finance_df['종목명'].isin(counts[counts == 20].index)]
 
 # 필터링 결과 확인
