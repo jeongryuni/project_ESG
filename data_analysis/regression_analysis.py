@@ -45,6 +45,8 @@ esg_avg_df = esg_df.groupby('회사명').agg({
 # 주가 변동성 데이터와 ESG 평균 등급 데이터 병합
 merged_df = pd.merge(finance_df, esg_avg_df, left_on='종목명', right_on='회사명')
 
+merged_df.to_csv('esg_average.csv', index=False)
+
 # 필요 없는 열 제거
 merged_df = merged_df[['종목명', '변동성', '종합등급_수치']]
 
