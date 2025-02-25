@@ -120,13 +120,11 @@ def predict_volatility(data, periods=12):  # 3년 = 12분기
     return forecast
 
 
-
 # 상위 30% 변동성 예측
 top30_forecast = predict_volatility(top30_volatility, periods=12)
 
 # 하위 30% 변동성 예측
 bottom30_forecast = predict_volatility(bottom30_volatility, periods=12)
-
 
 
 # 예측 결과 시각화
