@@ -1,7 +1,10 @@
-# 시간에 따른 ESG 등급 상위 그룹과 하위 그룹의 주가 변동성 비교
+# 시계열 분석
+# ESG 등급이 높은 기업과 낮은 기업의 주가 변동성 비교
+# ARIMA 모델을 활용하여 향후 3년 동안의 주가 변동성을 예측
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
 plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
 
@@ -89,5 +92,47 @@ plt.xticks(rotation=45)
 plt.legend()
 
 # 그래프 출력
+plt.tight_layout()
+plt.show()
+
+# ARIMA 모델을 이용한 예측 함수
+def predict_volatility(data, periods=12):  # 3년 = 12분기
+    data['연도-분기'] = pd.to_datetime(data['연도-분기'], format='%Y-%m')
+    model = ARIMA(data['변동성'], order=(1, 0, 1))
+    model_fit = model.fit()
+    forecast = model_fit.forecast(steps=periods)
+    return forecast
+
+# 상위 30% 변동성 예측
+top30_forecast = predict_volatility(top30_volatility, periods=12)
+
+# 하위 30% 변동성 예측
+bottom30_forecast = predict_volatility(bottom30_volatility, periods=12)
+
+# 예측 결과 시각화
+plt.figure(figsize=(14, 7))
+
+# 상위 30% 변동성 그래프
+plt.plot(top30_volatility['연도-분기'], top30_volatility['변동성'], label='상위 30% ESG 등급', color='blue')
+
+# 하위 30% 변동성 그래프
+plt.plot(bottom30_volatility['연도-분기'], bottom30_volatility['변동성'], label='하위 30% ESG 등급', color='red')
+
+# 예측된 값 추가 (상위 30%)
+forecast_index = pd.date_range(top30_volatility['연도-분기'].max(), periods=12, freq='QE')
+plt.plot(forecast_index, top30_forecast, label='상위 30% 변동성 예측', linestyle='--', color='blue')
+
+# 예측된 값 추가 (하위 30%)
+forecast_index_bottom = pd.date_range(bottom30_volatility['연도-분기'].max(), periods=12, freq='QE')
+plt.plot(forecast_index_bottom, bottom30_forecast, label='하위 30% 변동성 예측', linestyle='--', color='red')
+
+# 예측 그래프 작성
+plt.title('상위 30% vs 하위 30% ESG 등급의 주가 변동성 예측', fontsize=16)
+plt.xlabel('연도-분기', fontsize=12)
+plt.ylabel('변동성 (수익률 표준편차)', fontsize=12)
+plt.xticks(rotation=45)
+plt.legend()
+
+# 예측 그래프 출력
 plt.tight_layout()
 plt.show()
